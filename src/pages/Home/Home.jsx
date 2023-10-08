@@ -9,13 +9,13 @@ import Footer from '../../components/Footer';
 const Home = () => {
 
     const eventcart = useLoaderData()
-    console.log(eventcart)
+    const data = eventcart.slice(0,6)
     return (
         <div>
             <Navbar></Navbar>
             <Header></Header>
             <h2 className='text-3xl text-zinc-500 text-center mt-6 font-bold'><i>Community and Cultural Events</i></h2>
-            <EventCart eventcart={eventcart}></EventCart>
+            <EventCart eventcart={data}></EventCart>
             <Footer></Footer>
             
         </div>

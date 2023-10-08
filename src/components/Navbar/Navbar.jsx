@@ -20,7 +20,7 @@ const Navbar = () => {
         <li><NavLink to="/blog">Blog</NavLink></li>
     </>
     return (
-        <div className="navbar bg-pink-200 font-bold">
+        <div className="navbar bg-pink-200 font-bold text-xl">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -42,8 +42,11 @@ const Navbar = () => {
             </div>
             <div className="navbar-end mr-10">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                    {user?.displayName}
+                </label>
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                        <img src="https://i.ibb.co/6BFspK7/man-icon-png-29.png" />
+                        <img src={user?.photoURL} />
                     </div>
                 </label>
                 {

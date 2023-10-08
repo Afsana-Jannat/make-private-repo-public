@@ -52,6 +52,33 @@
         "location": "Downtown Food Plaza, Chicago",
         "description": "A training program is a planned sequence and combination of activities designed to equip employees with knowledge and ....",
         "image": "https://i.ibb.co/p2ZrD8Q/5-G8-A8444-2048x1365.webp"
+      },
+      {
+        "id": 7,
+        "event_type": "Cultural Celebration",
+        "event_name": "Chinese New Year Celebration",
+        "date": "2023-01-28",
+        "location": "Chinatown, San Francisco",
+        "description": "Ring in the Chinese New Year with traditional dragon dances, fireworks, and a feast of Chinese delicacies.",
+        "image": "chinese_new_year_celebration.jpg"
+      },
+      {
+        "id": 8,
+        "event_type": "Parade",
+        "event_name": "Mardi Gras Parade",
+        "date": "2023-02-28",
+        "location": "Bourbon Street, New Orleans",
+        "description": "Experience the vibrant and lively Mardi Gras parade with colorful floats, masks, and beads in the heart of New Orleans.",
+        "image": "mardi_gras_parade.jpg"
+      },
+      {
+        "id": 9,
+        "event_type": "Carnival",
+        "event_name": "Winter Wonderland Carnival",
+        "date": "2023-12-15",
+        "location": "Snowy Park, Iceville",
+        "description": "Embrace the magic of winter at our Winter Wonderland Carnival, featuring ice skating, hot cocoa, and festive games.",
+        "image": "winter_wonderland_carnival.jpg"
       }
     ]
 

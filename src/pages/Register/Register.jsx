@@ -1,28 +1,48 @@
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext)
-
+    const {createUser, handleUpdateProfile} = useContext(AuthContext)
+    const navigate = useNavigate();
     const handleRegister = e =>{
         e.preventDefault();
         console.log(e.currentTarget);
         const form = new FormData(e.currentTarget);
         const name = form.get('name')
         const email = form.get('email');
+        const img = form.get("img")
         const password = form.get('password')
-        console.log(name, email, password);
+        if (password.length < 6) {
+            return toast.error("password should be at least 6 characters longs");
+          }
+        
+          // Check if the password contains at least one alphabet character (a-zA-Z)
+          if (!/[a-zA-Z]/.test(password)) {
+            return toast.error("password need at least 1 alphabet");
+          }
+        
+          // Check if the password contains at least one symbol character
+          if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)) {
+            return toast.error("password need at least 1 symbol");
+          }
 
         //  create user,
         createUser(email, password)
         .then(result => {
-            console.log(result.user)
+            // updateProfile(auth)
+            
+            handleUpdateProfile(name, img)
+            .then(() =>{
+                toast.success("user Create success")
+                navigate("/")
+            })
         })
         .catch(error =>{
-            console.error(error)
+            toast.error(error.message)
         })
     }
     return (
@@ -42,6 +62,12 @@ const Register = () => {
                         <span className="label-text">Email</span>
                     </label>
                     <input type="email" name='email' placeholder="email" className="input input-bordered" required />
+                </div>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">ImageURL</span>
+                    </label>
+                    <input type="text" name='img' placeholder="ImageURL" className="input input-bordered" required />
                 </div>
                 <div className="form-control">
                     <label className="label">

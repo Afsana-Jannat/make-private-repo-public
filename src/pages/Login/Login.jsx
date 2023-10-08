@@ -1,25 +1,44 @@
 import Navbar from '../../components/Navbar/Navbar';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useContext } from 'react';
 import AnotherLoginSide from '../../components/AnotherLoginSide/AnotherLoginSide';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     const {signIn} = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    console.log('location in the login page', location)
 
     const handleLogin = e =>{
         e.preventDefault();
-        console.log(e.currentTarget);
+        const validation = /^(?=.*[a-zA-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]).{6, }$/
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password')
         console.log(email, password);
+        if (password.length < 6) {
+            return toast.error("password should be at least 6 characters longs");
+          }
+        
+          // Check if the password contains at least one alphabet character (a-zA-Z)
+          if (!/[a-zA-Z]/.test(password)) {
+            return toast.error("password need at least 1 alphabet");
+          }
+        
+          // Check if the password contains at least one symbol character
+          if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)) {
+            return toast.error("password need at least 1 symbol");
+          }
         signIn(email, password)
         .then(result =>{
-            console.log(result.user)
+            toast.success("log in successs")
+
+            navigate(location?.state ? location.state : '/')
         })
-        .catch(error => {
-            console.error(error)
+        .catch(error =>{
+            toast.error(error.message)
         })
     }
     return (
