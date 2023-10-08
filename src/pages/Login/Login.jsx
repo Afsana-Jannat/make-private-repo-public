@@ -9,15 +9,12 @@ const Login = () => {
     const {signIn} = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    console.log('location in the login page', location)
 
     const handleLogin = e =>{
         e.preventDefault();
-        const validation = /^(?=.*[a-zA-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]).{6, }$/
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password')
-        console.log(email, password);
         if (password.length < 6) {
             return toast.error("password should be at least 6 characters longs");
           }
@@ -32,7 +29,7 @@ const Login = () => {
             return toast.error("password need at least 1 symbol");
           }
         signIn(email, password)
-        .then(result =>{
+        .then(() =>{
             toast.success("log in successs")
 
             navigate(location?.state ? location.state : '/')
