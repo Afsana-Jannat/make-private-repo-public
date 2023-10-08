@@ -16,10 +16,11 @@ const Navbar = () => {
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/details">Details</NavLink></li>
-        <li><NavLink to="/service">service</NavLink></li>
+        <li><NavLink to="/services">Services</NavLink></li>
+        <li><NavLink to="/blog">Blog</NavLink></li>
     </>
     return (
-        <div className="navbar bg-pink-200">
+        <div className="navbar bg-pink-200 font-bold">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

@@ -1,8 +1,11 @@
-import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
+import { useContext } from 'react';
+import AnotherLoginSide from '../../components/AnotherLoginSide/AnotherLoginSide';
 
 const Login = () => {
+    const {signIn} = useContext(AuthContext);
 
     const handleLogin = e =>{
         e.preventDefault();
@@ -11,12 +14,20 @@ const Login = () => {
         const email = form.get('email');
         const password = form.get('password')
         console.log(email, password);
+        signIn(email, password)
+        .then(result =>{
+            console.log(result.user)
+        })
+        .catch(error => {
+            console.error(error)
+        })
     }
     return (
         <div>
             <Navbar></Navbar>
             <div className='text-center items-center'>
             <h2 className='text-3xl my-10'>Please Login</h2>
+            
             <form onSubmit={handleLogin} className="md:w-3/4 lg:1/2 mx-auto">
                 <div className="form-control">
                     <label className="label">
@@ -36,9 +47,15 @@ const Login = () => {
                 <div className="form-control mt-6">
                     <button className="btn btn-outline btn-secondary">Login</button>
                 </div>
+                
             </form>
-            <p className='mt-4 text-xl'>Do not have an account? <Link className='text-blue-400 font-bold' to="/register">Register</Link></p>
+            <p className='mt-4 text-xl'>Do not have an account? 
+            <Link 
+            className='text-blue-400 font-bold'
+             to="/register">Register</Link></p>
+             <AnotherLoginSide></AnotherLoginSide>
             </div>
+            
 
         </div>
     );

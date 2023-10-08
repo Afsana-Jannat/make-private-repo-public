@@ -1,11 +1,11 @@
 import React from 'react';
 
 const EventCarts = ({events}) => {
-    const {id, name, description, image} = events || {}
+    const {id, event_type, description, image} = events || {}
 
     return (
         <div>
-            <div className="py-10 relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+            <div className="py-10 md:ml-20 relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
   <div className="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
     <img
       src={image}
@@ -15,7 +15,7 @@ const EventCarts = ({events}) => {
   </div>
   <div className="p-6">
     <h6 className="mb-4 block font-sans text-base font-semibold uppercase leading-relaxed tracking-normal text-pink-500 antialiased">
-      {name}
+      {event_type}
     </h6>
     <p className="mb-8 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
       {description}

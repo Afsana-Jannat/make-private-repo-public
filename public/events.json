@@ -1,30 +1,57 @@
 [
-    {
-        "id": "1",
-        "image":"https://i.ibb.co/r20WwVt/Top-10-Festivals-In-The-World-Holi.jpg",
-        "name": "Festivals",
-        "description": "A festival is an extraordinary event celebrated by a community and centering on some characteristic aspect or aspects of that community and its religion or ...",
-        "bg-color": ""
-    },
-    {
-        "id": "1",
-        "image":"https://i.ibb.co/0qrjh5m/5a7b568de559f0ac2d8b46fd.webp",
-        "name": "Parades",
-        "description": "A parade is a procession of people, usually organized along a street, often in costume, and often accompanied by marching bands, floats, or sometimes large ...",
-        "bg-color": ""
-    },
-    {
-        "id": "1",
-        "image":"https://i.ibb.co/mRzDyRv/Double-Carousel.jpg",
-        "name": "Carnivals and Fairs",
-        "description": "Experience the excitement of traditional carnivals & fairs with Fiesta Shows! Rides, attractions, games & fair foods - fun for the family!",
-        "bg-color": ""
-    },
-    {
-        "id": "1",
-        "image":"https://i.ibb.co/GMHwdsL/dsc02821-1-orig-orig.jpg",
-        "name": "Educational Conference",
-        "description": "Upcoming education Conferences in USA 2023-2024 · International Conference on Future of Education (ICFE)",
-        "bg-color": ""
-    }
-]
+      {
+        "id": 1,
+        "event_type": "Festival",
+        "event_name": "Spring Music Festival",
+        "date": "2023-04-15",
+        "location": "Central Park, New York",
+        "description": "Join us for a day of live music, food, and fun in Central Park as we celebrate the arrival of spring.",
+        "image": "https://i.ibb.co/r20WwVt/Top-10-Festivals-In-The-World-Holi.jpg"
+      },
+      {
+        "id": 2,
+        "event_type": "Parade",
+        "event_name": "Independence Day Parade",
+        "date": "2023-07-04",
+        "location": "Main Street, Anytown",
+        "description": "Celebrate Independence Day with our annual parade featuring marching bands, colorful floats, and patriotic spirit.",
+        "image": "https://i.ibb.co/0qrjh5m/5a7b568de559f0ac2d8b46fd.webp"
+      },
+      {
+        "id": 3,
+        "event_type": "Carnival",
+        "event_name": "Summer Carnival Extravaganza",
+        "date": "2023-08-20",
+        "location": "Fairgrounds, Carnivalville",
+        "description": "Experience the thrill of rides, games, and delicious treats at our summer carnival.",
+        "image": "https://i.ibb.co/mRzDyRv/Double-Carousel.jpg"
+      },
+      {
+        "id": 4,
+        "event_type": "Cultural Celebration",
+        "event_name": "Diwali Festival of Lights",
+        "date": "2023-11-05",
+        "location": "City Hall Plaza, San Francisco",
+        "description": "Join us for a cultural celebration of Diwali, the Festival of Lights, with traditional music, dance, and cuisine.",
+        "image": "https://i.ibb.co/GMHwdsL/dsc02821-1-orig-orig.jpg"
+      },
+      {
+        "id": 5,
+        "event_type": "Fundraiser",
+        "event_name": "Children's Hospital Charity Gala",
+        "date": "2023-09-10",
+        "location": "Grand Ballroom, Hilton Hotel",
+        "description": "Support a good cause at our annual charity gala to raise funds for the Children's Hospital. Enjoy a glamorous evening of dining and entertainment.",
+        "image": "https://i.ibb.co/z7Y9gJb/Equality-Fundraiser-23-Work-Messages-Twitter-1.png"
+      },
+      {
+        "id": 6,
+        "event_type": "Traning Program",
+        "event_name": "Traning Programmm",
+        "date": "2023-06-25",
+        "location": "Downtown Food Plaza, Chicago",
+        "description": "A training program is a planned sequence and combination of activities designed to equip employees with knowledge and ....",
+        "image": "https://i.ibb.co/p2ZrD8Q/5-G8-A8444-2048x1365.webp"
+      }
+    ]
+
