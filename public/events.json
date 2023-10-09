@@ -60,7 +60,7 @@
         "date": "2023-01-28",
         "location": "Chinatown, San Francisco",
         "description": "Ring in the Chinese New Year with traditional dragon dances, fireworks, and a feast of Chinese delicacies.",
-        "image": "chinese_new_year_celebration.jpg"
+        "image": "https://i.ibb.co/GMHwdsL/dsc02821-1-orig-orig.jpg"
       },
       {
         "id": 8,
@@ -69,7 +69,7 @@
         "date": "2023-02-28",
         "location": "Bourbon Street, New Orleans",
         "description": "Experience the vibrant and lively Mardi Gras parade with colorful floats, masks, and beads in the heart of New Orleans.",
-        "image": "mardi_gras_parade.jpg"
+        "image": "https://i.ibb.co/0qrjh5m/5a7b568de559f0ac2d8b46fd.webp"
       },
       {
         "id": 9,
@@ -78,7 +78,7 @@
         "date": "2023-12-15",
         "location": "Snowy Park, Iceville",
         "description": "Embrace the magic of winter at our Winter Wonderland Carnival, featuring ice skating, hot cocoa, and festive games.",
-        "image": "winter_wonderland_carnival.jpg"
+        "image": "https://i.ibb.co/mRzDyRv/Double-Carousel.jpg"
       }
     ]
 
